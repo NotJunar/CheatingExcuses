@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheating in Class Excuses</title>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 36rem;
+            padding: 2rem;
+            background-color: #1e293b;
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-2px);
+        }
+
+        .excuse {
+            font-size: clamp(1.25rem, 3vw, 1.875rem);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -0.025em;
+        }
+
+        .reload {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            background-color: #10b981;
+            color: #ffffff;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            letter-spacing: 0.025em;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .reload:hover {
+            background-color: #059669;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        .reload:active {
+            transform: translateY(0);
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #f8fafc;
+                color: #0f172a;
+            }
+            
+            .container {
+                background-color: #ffffff;
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="excuse" id="excuse">Loading your next excuse...</div>
+        <button class="reload" onclick="location.reload()">Give Me Another Excuse</button>
+    </div>
+    <script>
+        const excuses = [
+            "I wasn’t cheating; I was just double-checking my answers!",
+            "I thought it was an open-book test!",
+            "I was helping my friend, not copying!",
+            "The notes fell out of my pocket; I wasn’t using them!",
+            "I wasn’t looking at their paper; I was just stretching my neck!",
+            "I thought sharing answers was teamwork!",
+            "I was only confirming the question, not the answer!",
+            "I didn’t know we weren’t allowed to use calculators!",
+            "My smartwatch glitched; I wasn’t Googling!",
+            "I wasn’t cheating; I was practicing telepathy!",
+            "The formula sheet was for reference, not cheating!",
+            "I only glanced at their paper by accident!",
+            "I was checking if their handwriting was better than mine!",
+            "It’s not cheating; it’s resourceful learning!",
+            "I wrote the answers on my hand as a backup, just in case!",
+            "I wasn’t using my phone; I was checking the time!",
+            "I didn’t realize the answers were written on the desk!",
+            "I was just verifying my answer with theirs!",
+            "I thought we could collaborate on this one!",
+            "I didn’t know whispering answers was against the rules!",
+            "I wasn’t passing notes; I was passing encouragement!",
+            "I was just testing my eyesight by reading their paper!",
+            "I thought everyone brought a cheat sheet!",
+            "I wasn’t using the cheat sheet; I was folding origami!",
+            "I wasn’t cheating; I was just inspired by their answers!",
+            "I thought the test rules were more flexible!",
+            "I was checking the alignment of my answers with theirs!",
+            "I only copied the question, not the answer!",
+            "I wasn’t cheating; I was conducting a social experiment!",
+            "I didn’t know earphones were banned; I was listening to white noise!",
+            "I was just rehearsing the answers under my breath!",
+            "I wasn’t cheating; I was practicing my memory!",
+            "I didn’t know asking for hints was considered cheating!",
+            "I thought the teacher allowed collaboration for this section!",
+            "I wasn’t copying; I was comparing strategies!",
+            "I was only borrowing their answer temporarily!",
+            "I didn’t realize my smartwatch was connected to the internet!",
+            "I was helping the person next to me, not cheating!",
+            "I didn’t write on my arm; it’s an accidental tattoo!",
+            "I wasn’t whispering answers; I was reciting a mantra!",
+            "I thought the answers written on the board were for everyone!",
+            "I wasn’t reading their paper; I was admiring their handwriting!",
+            "I thought calculators with memory were allowed!",
+            "I was just brainstorming out loud, not sharing answers!",
+            "I didn’t realize the teacher was watching!",
+            "I wasn’t using my phone; I was adjusting the brightness!",
+            "I didn’t know my smart pen was recording answers!",
+            "I thought this was a group project!",
+            "I wasn’t cheating; I was using innovative methods!",
+            "I wasn’t passing notes; I was sending motivational quotes!"
+        ];
+
+        const randomExcuse = excuses[Math.floor(Math.random() * excuses.length)];
+        document.getElementById("excuse").textContent = randomExcuse;
+    </script>
+</body>
+</html>
